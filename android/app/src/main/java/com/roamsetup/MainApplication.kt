@@ -36,7 +36,7 @@ class MainApplication : Application(), ReactApplication {
 
   override fun onCreate() {
     super.onCreate()
-        Roam.initialize(this, "f3cf81ab69f650350dfbf75ec7d4007aa1073a53aa8d924df6ff4f3481e1ed2d")
+        Roam.initialize(this, "")
 
     SoLoader.init(this, OpenSourceMergedSoMapping)
     if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {

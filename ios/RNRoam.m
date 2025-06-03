@@ -28,7 +28,7 @@ RCT_EXPORT_MODULE();
   if (self) {
     [Roam setDelegate:self];
     
-    [Roam initialize:@"922a5dfd5386cc60deab5bb810623c43e4ed90eccbddfb92e354358cc3cea4d7" :NULL :NULL];
+    [Roam initialize:@"" :NULL :NULL];
  
 
     printf("dtaaaaa");
