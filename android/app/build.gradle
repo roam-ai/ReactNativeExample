@@ -79,7 +79,7 @@ android {
 
     namespace "com.roamsetup"
     defaultConfig {
-        applicationId "com.roamsetup"
+        applicationId "com.roam.jakala"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -106,10 +106,14 @@ android {
         }
     }
 }
-
+repositories {
+    mavenCentral()
+    maven { url 'https://com-roam-android.s3.amazonaws.com/' }
+}
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+    implementation 'com.roam.sdk:roam-android:0.1.40'
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")

@@ -11,6 +11,7 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
+import com.roam.sdk.Roam;
 
 class MainApplication : Application(), ReactApplication {
 
@@ -35,6 +36,8 @@ class MainApplication : Application(), ReactApplication {
 
   override fun onCreate() {
     super.onCreate()
+        Roam.initialize(this, "f3cf81ab69f650350dfbf75ec7d4007aa1073a53aa8d924df6ff4f3481e1ed2d")
+
     SoLoader.init(this, OpenSourceMergedSoMapping)
     if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
       // If you opted-in for the New Architecture, we load the native entry point for this app.
